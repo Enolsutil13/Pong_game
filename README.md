@@ -16,7 +16,7 @@ Este proyecto es una implementación básica del clásico juego de Pong. El jueg
 
 1. Clona este repositorio:
     ```sh
-    git clone https://github.com/Enolsutil13/pong-game.git
+    git clone https://github.com/Enolsutil13/pong_game.git
     cd pong-game
     ```
 
