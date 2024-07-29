@@ -1,0 +1,60 @@
+#:kivy 1.0.9
+
+# Definición del widget PongBall
+<PongBall>:
+    size: 50, 50
+    canvas:
+        Ellipse:
+            pos: self.pos
+            size: self.size
+
+# Definición del widget PongPaddle
+<PongPaddle>:
+    size: 25, 200
+    canvas:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+# Definición del widget PongGame
+<PongGame>:
+    ball: pong_ball
+    player1: player_left
+    player2: player_right
+
+    canvas:
+        # Línea central del campo de juego
+        Rectangle:
+            pos: self.center_x - 5, 0
+            size: 10, self.height
+
+    # Marcador del jugador 1
+    Label:
+        font_size: 70
+        center_x: root.width / 4
+        top: root.top - 50
+        text: str(root.player1.score)
+    
+    # Marcador del jugador 2
+    Label:
+        font_size: 70
+        center_x: root.width * 3 / 4
+        top: root.top - 50
+        text: str(root.player2.score)
+
+    # Instancia de PongBall
+    PongBall:
+        id: pong_ball
+        center: self.parent.center
+    
+    # Instancia de PongPaddle para el jugador 1
+    PongPaddle:
+        id: player_left
+        x: root.x 
+        center_y: root.center_y 
+
+    # Instancia de PongPaddle para el jugador 2
+    PongPaddle:
+        id: player_right
+        x: root.width - self.width
+        center_y: root.center_y
