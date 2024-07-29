@@ -1,3 +1,4 @@
+Esta es una app diferente a lo que suelo hacer sobre análisis de datos, aunque el mundo de python es extenso y hay multitud de frameworks y librerías donde crear cosas maravillosas.
 # Pong Game
 
 Este es un simple juego de Pong implementado en Python utilizando el framework Kivy.
